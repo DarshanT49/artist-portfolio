@@ -27,7 +27,7 @@ export default function ArtworkModal() {
     showToast
   } = useGallery();
 
-  const [isZoomed, setIsZoomed] = useState(false);
+  const [isFullPageImage, setIsFullPageImage] = useState(false);
   const [copied, setCopied] = useState(false);
   const modalScrollRef = useRef(null);
 
@@ -37,17 +37,17 @@ export default function ArtworkModal() {
 
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') {
-        if (isFullscreen) {
+        if (isFullPageImage) {
+          setIsFullPageImage(false);
+        } else if (isFullscreen) {
           setIsFullscreen(false);
         } else {
           closeArtwork();
         }
       } else if (e.key === 'ArrowRight') {
         goToNextArtwork();
-        setIsZoomed(false);
       } else if (e.key === 'ArrowLeft') {
         goToPrevArtwork();
-        setIsZoomed(false);
       }
     };
 
@@ -59,7 +59,7 @@ export default function ArtworkModal() {
       window.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'unset';
     };
-  }, [activeArtwork, isFullscreen, closeArtwork, goToNextArtwork, goToPrevArtwork, setIsFullscreen]);
+  }, [activeArtwork, isFullPageImage, isFullscreen, closeArtwork, goToNextArtwork, goToPrevArtwork, setIsFullscreen]);
 
   if (!activeArtwork) return null;
 
@@ -138,10 +138,7 @@ export default function ArtworkModal() {
       {/* Prev / Next navigation floating buttons */}
       <button
         className="modal-nav-arrow prev"
-        onClick={() => {
-          goToPrevArtwork();
-          setIsZoomed(false);
-        }}
+        onClick={goToPrevArtwork}
         title="Previous painting (Left Arrow)"
         aria-label="Previous artwork"
       >
@@ -150,10 +147,7 @@ export default function ArtworkModal() {
 
       <button
         className="modal-nav-arrow next"
-        onClick={() => {
-          goToNextArtwork();
-          setIsZoomed(false);
-        }}
+        onClick={goToNextArtwork}
         title="Next painting (Right Arrow)"
         aria-label="Next artwork"
       >
@@ -166,11 +160,19 @@ export default function ArtworkModal() {
           {/* Main Showcase Split Row */}
           <div className="artwork-showcase-grid">
             {/* Visual Media Showcase */}
-            <div className={`artwork-media-stage ${isZoomed ? 'zoomed' : ''}`}>
+            <div className="artwork-media-stage">
               <div
                 className="artwork-image-frame"
-                onClick={() => setIsZoomed(!isZoomed)}
-                title="Click to toggle inspection zoom"
+                onClick={() => setIsFullPageImage(true)}
+                title="Click to view image on full page"
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setIsFullPageImage(true);
+                  }
+                }}
               >
                 <img
                   src={activeArtwork.image}
@@ -250,6 +252,44 @@ export default function ArtworkModal() {
           <RelatedArtworks modalContainerRef={modalScrollRef} />
         </div>
       </div>
+
+      {/* Full Page Image Lightbox Overlay */}
+      {isFullPageImage && (
+        <div
+          className="full-page-image-overlay"
+          onClick={() => setIsFullPageImage(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${activeArtwork.title} Full View`}
+        >
+          {/* Top Bar for Full Page */}
+          <div className="full-page-top-bar" onClick={(e) => e.stopPropagation()}>
+            <div className="full-page-title">
+              <strong>{activeArtwork.title}</strong>
+              <span className="full-page-year">{activeArtwork.year}</span>
+            </div>
+            <button
+              className="full-page-close-btn"
+              onClick={() => setIsFullPageImage(false)}
+              aria-label="Close full page view"
+              title="Close full page view (Esc)"
+            >
+              <X size={22} />
+            </button>
+          </div>
+
+          {/* Full Page Image Display */}
+          <div className="full-page-image-wrap" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={activeArtwork.image}
+              alt={activeArtwork.title}
+              className="full-page-img"
+            />
+          </div>
+
+          <div className="full-page-hint">Click anywhere or press Esc to return</div>
+        </div>
+      )}
     </div>
   );
 }
