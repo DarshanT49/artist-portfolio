@@ -7,14 +7,8 @@ import {
   ChevronRight,
   Heart,
   Share2,
-  Maximize2,
-  Minimize2,
-  ZoomIn,
-  ZoomOut,
-  Palette,
   Check,
   Calendar,
-  Layers,
   Ruler,
   Tag
 } from 'lucide-react';
@@ -108,26 +102,6 @@ export default function ArtworkModal() {
         </div>
 
         <div className="top-bar-right">
-          {/* Zoom Toggle */}
-          <button
-            className={`modal-action-btn ${isZoomed ? 'active' : ''}`}
-            onClick={() => setIsZoomed(!isZoomed)}
-            title={isZoomed ? 'Zoom out' : 'Zoom in to inspect details'}
-            aria-label="Toggle zoom"
-          >
-            {isZoomed ? <ZoomOut size={18} /> : <ZoomIn size={18} />}
-          </button>
-
-          {/* Fullscreen view toggle */}
-          <button
-            className={`modal-action-btn ${isFullscreen ? 'active' : ''}`}
-            onClick={() => setIsFullscreen(!isFullscreen)}
-            title={isFullscreen ? 'Exit full screen' : 'View full screen painting'}
-            aria-label="Toggle fullscreen"
-          >
-            {isFullscreen ? <Minimize2 size={18} /> : <Maximize2 size={18} />}
-          </button>
-
           {/* Share */}
           <button
             className="modal-action-btn"
@@ -204,26 +178,6 @@ export default function ArtworkModal() {
                   className="showcase-main-image"
                 />
               </div>
-
-              {/* Color Palette Extraction */}
-              <div className="artwork-palette-box">
-                <div className="palette-label">
-                  <Palette size={13} />
-                  <span>Artwork Palette</span>
-                </div>
-                <div className="palette-dots">
-                  {activeArtwork.palette.map((color, idx) => (
-                    <div
-                      key={idx}
-                      className="palette-dot"
-                      style={{ background: color }}
-                      title={`Color: ${color}`}
-                    >
-                      <span className="color-tooltip">{color}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
 
             {/* Artwork Technical & Narrative Details */}
@@ -239,19 +193,11 @@ export default function ArtworkModal() {
                 <div className="artwork-artist-credit">Original Artwork by <strong>Darshan</strong></div>
               </div>
 
-              {/* Specification Grid */}
+              {/* Specification Grid (Dimensions & Year) */}
               <div className="artwork-specs-grid">
                 <div className="spec-item">
                   <div className="spec-label">
-                    <Layers size={14} />
-                    <span>Medium & Surface</span>
-                  </div>
-                  <div className="spec-value">{activeArtwork.medium}</div>
-                </div>
-
-                <div className="spec-item">
-                  <div className="spec-label">
-                    <Ruler size={14} />
+                    <Ruler size={13} />
                     <span>Dimensions</span>
                   </div>
                   <div className="spec-value">{activeArtwork.dimensions}</div>
@@ -259,7 +205,7 @@ export default function ArtworkModal() {
 
                 <div className="spec-item">
                   <div className="spec-label">
-                    <Calendar size={14} />
+                    <Calendar size={13} />
                     <span>Year Created</span>
                   </div>
                   <div className="spec-value">{activeArtwork.year} (Original)</div>
@@ -272,13 +218,7 @@ export default function ArtworkModal() {
                 <p className="narrative-text">{activeArtwork.description}</p>
               </div>
 
-              {/* Artwork Inspiration */}
-              {activeArtwork.inspiration && (
-                <div className="artwork-inspiration-box">
-                  <span className="inspiration-label">Inspiration</span>
-                  <p className="inspiration-text">{activeArtwork.inspiration}</p>
-                </div>
-              )}
+              
 
               {/* Tags */}
               <div className="artwork-tags-row">

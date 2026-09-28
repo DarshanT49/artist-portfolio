@@ -64,55 +64,6 @@
   font-weight: 600;
 }
 
-/* Studio Palette Showcase */
-.palette-strip {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  padding: 8px 18px;
-  background: var(--c-surface);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-full);
-  margin-bottom: 36px;
-  box-shadow: var(--shadow-sm);
-}
-
-.palette-strip-label {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--c-text-muted);
-}
-
-.palette-swatches {
-  display: flex;
-  gap: 6px;
-}
-
-.swatch {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  border: 1px solid var(--c-border);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: transform var(--transition-fast);
-  position: relative;
-}
-
-.swatch span {
-  display: none;
-}
-
-.swatch:hover {
-  transform: scale(1.25);
-  border-color: var(--c-text-primary);
-}
-
 /* Hero Action Buttons */
 .hero-actions {
   display: flex;
@@ -163,13 +114,6 @@
 @media (max-width: 600px) {
   .hero-banner {
     padding: 40px 16px 28px;
-  }
-  
-  .palette-strip {
-    flex-direction: column;
-    gap: 8px;
-    padding: 10px 16px;
-    border-radius: var(--radius-md);
   }
   
   .hero-actions {

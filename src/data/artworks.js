@@ -21,7 +21,6 @@ export const ARTWORKS = [
     image: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=85',
     thumbnail: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=600&q=80',
     description: 'An exploration of quietude and introspective light. Subtle impasto textures blend with translucent glazes to evoke dawn mist gently rising above silent valleys. The painting contemplates the boundary between memory and waking sensation.',
-    inspiration: 'Inspired by early morning meditations in the coastal highlands of Provence, where the dawn light dissolves physical edges into pure atmospheric color.',
     palette: ['#F9F8F6', '#EFE9E3', '#D9CFC7', '#C9B59C', '#6E5C4E'],
     tags: ['Mist', 'Atmospheric', 'Subtle', 'Linen', 'Texture'],
     featured: true
@@ -38,7 +37,6 @@ export const ARTWORKS = [
     image: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1200&q=85',
     thumbnail: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=600&q=80',
     description: 'A dynamic composition balancing raw natural mineral pigments with organic sweeps of warm ochre, chalk white, and desert sandstone. Each layer was applied with palette knives and allowed to cure organically over several weeks.',
-    inspiration: 'Geological strata found in the Mojave desert and the natural erosion patterns carved by desert winds.',
     palette: ['#F9F8F6', '#C9B59C', '#B38B6D', '#7A624E', '#3D342E'],
     tags: ['Abstract', 'Ochre', 'Texture', 'Mineral', 'Modern'],
     featured: true
@@ -55,7 +53,6 @@ export const ARTWORKS = [
     image: 'https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=1200&q=85',
     thumbnail: 'https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=600&q=80',
     description: 'A study in human composure and gentle reflection. The subject emerges from shadowy warm umber tones into delicate alabaster highlights, creating a poignant contrast that invites viewers into a moment of shared stillness.',
-    inspiration: 'Classical chiaroscuro portraiture reimagined through a 21st-century minimalist sensibility.',
     palette: ['#F9F8F6', '#EFE9E3', '#C9B59C', '#4A3E39', '#1F1A18'],
     tags: ['Portrait', 'Figurative', 'Chiaroscuro', 'Serenity'],
     featured: true
@@ -72,7 +69,6 @@ export const ARTWORKS = [
     image: 'https://images.unsplash.com/photo-1578926375605-eaf7559b1458?auto=format&fit=crop&w=1200&q=85',
     thumbnail: 'https://images.unsplash.com/photo-1578926375605-eaf7559b1458?auto=format&fit=crop&w=600&q=80',
     description: 'Capturing the sweeping ridgelines of shifting sand banks under midday sun. The warmth of the sand is juxtaposed with the subtle cool shadows lingering in the deep hollows.',
-    inspiration: 'The undulating dunes of Erg Chebbi during late afternoon wind sweeps.',
     palette: ['#F9F8F6', '#EFE9E3', '#D9CFC7', '#C9B59C', '#947B62'],
     tags: ['Landscape', 'Desert', 'Earth', 'Minimalism', 'Peace'],
     featured: false
@@ -89,7 +85,6 @@ export const ARTWORKS = [
     image: 'https://images.unsplash.com/photo-1582561424760-0321d75e81fa?auto=format&fit=crop&w=1200&q=85',
     thumbnail: 'https://images.unsplash.com/photo-1582561424760-0321d75e81fa?auto=format&fit=crop&w=600&q=80',
     description: 'A botanical watercolor study emphasizing spontaneous wet-on-wet pigments that bleed organically across deckled paper edges. The soft petals convey fragility and impermanence.',
-    inspiration: 'Wild peonies blooming after a spring rain shower in an overgrown conservatory.',
     palette: ['#F9F8F6', '#EFE9E3', '#D9CFC7', '#A89279', '#574C43'],
     tags: ['Botanical', 'Watercolor', 'Delicate', 'Paper', 'Floral'],
     featured: true
@@ -106,7 +101,6 @@ export const ARTWORKS = [
     image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1200&q=85',
     thumbnail: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80',
     description: 'A study of geometric harmony and spatial tension. Textured arches and geometric planes intersect, casting illusionary shadows that alter as ambient daylight shifts throughout the room.',
-    inspiration: 'Brutalist and Mediterranean architecture bathed in Mediterranean coastal sun.',
     palette: ['#F9F8F6', '#EFE9E3', '#C9B59C', '#786C60', '#2E2723'],
     tags: ['Architecture', 'Plaster', 'Shadow', 'Geometric', 'Relief'],
     featured: false
@@ -123,7 +117,6 @@ export const ARTWORKS = [
     image: 'https://images.unsplash.com/photo-1549887534-1541e9326642?auto=format&fit=crop&w=1200&q=85',
     thumbnail: 'https://images.unsplash.com/photo-1549887534-1541e9326642?auto=format&fit=crop&w=600&q=80',
     description: 'Gestural charcoal drawing capturing kinetic energy in its purest form. Expressive strokes blend with powdered pigment washes, celebrating the spontaneous gesture of the hand.',
-    inspiration: 'Traditional calligraphy and modern choreographic dance movements.',
     palette: ['#F9F8F6', '#D9CFC7', '#80776E', '#36322E', '#171513'],
     tags: ['Charcoal', 'Gestural', 'Ink', 'Movement', 'Expressive'],
     featured: false
@@ -140,7 +133,6 @@ export const ARTWORKS = [
     image: 'https://images.unsplash.com/photo-1579541814924-49fef17c5be5?auto=format&fit=crop&w=1200&q=85',
     thumbnail: 'https://images.unsplash.com/photo-1579541814924-49fef17c5be5?auto=format&fit=crop&w=600&q=80',
     description: 'A warm landscape painting evoking rolling cypress-lined hills and distant stone villas shrouded in golden haze. Layered glazes provide rich optical depth and luminous warmth.',
-    inspiration: 'Summer travels through Val d’Orcia, Tuscany during harvest season.',
     palette: ['#F9F8F6', '#EFE9E3', '#D9CFC7', '#C9B59C', '#5E4E3E'],
     tags: ['Tuscany', 'Oil', 'Golden Hour', 'Classic', 'Serene'],
     featured: true
@@ -157,7 +149,6 @@ export const ARTWORKS = [
     image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1200&q=85',
     thumbnail: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=80',
     description: 'Gold leaf fragments suspended within raw matte earthy textures. The juxtaposition of precious metal and weathered stone symbolizes resilience through time and age.',
-    inspiration: 'Kintsugi philosophy and weathered archaeological relics.',
     palette: ['#F9F8F6', '#C9B59C', '#B59F82', '#695C4F', '#241F1C'],
     tags: ['Gold Leaf', 'Kintsugi', 'Abstract', 'Luxe', 'Modern'],
     featured: true
@@ -174,7 +165,6 @@ export const ARTWORKS = [
     image: 'https://images.unsplash.com/photo-1580136579312-94651dfd596d?auto=format&fit=crop&w=1200&q=85',
     thumbnail: 'https://images.unsplash.com/photo-1580136579312-94651dfd596d?auto=format&fit=crop&w=600&q=80',
     description: 'A tranquil portrait centered on inward reflection. Soft earthy skin tones harmonize with linen background washes, creating an intimate aura of contemplation and grace.',
-    inspiration: 'Portraits of the Northern Renaissance combined with modern minimal aesthetics.',
     palette: ['#F9F8F6', '#EFE9E3', '#D9CFC7', '#C9B59C', '#403630'],
     tags: ['Portrait', 'Grace', 'Introspective', 'Linen'],
     featured: false
@@ -191,7 +181,6 @@ export const ARTWORKS = [
     image: 'https://images.unsplash.com/photo-1579783901586-d88db74b4fe4?auto=format&fit=crop&w=1200&q=85',
     thumbnail: 'https://images.unsplash.com/photo-1579783901586-d88db74b4fe4?auto=format&fit=crop&w=600&q=80',
     description: 'Capturing the ebb and surge of coastal waters. Granulating minerals and sea salt crystallize naturally onto paper, mimicking real sand and wave residue on the shore.',
-    inspiration: 'Atlantic coastal tides along the rocky coves of Brittany.',
     palette: ['#F9F8F6', '#EFE9E3', '#D9CFC7', '#A39281', '#3B3632'],
     tags: ['Watercolor', 'Ocean', 'Tidal', 'Atmosphere', 'Granulation'],
     featured: false
@@ -208,7 +197,6 @@ export const ARTWORKS = [
     image: 'https://images.unsplash.com/photo-1576769267415-9642010aa962?auto=format&fit=crop&w=1200&q=85',
     thumbnail: 'https://images.unsplash.com/photo-1576769267415-9642010aa962?auto=format&fit=crop&w=600&q=80',
     description: 'Rich earthy textures interact under muted directional illumination. Built up in sixteen separate glaze passes over a four-month period to achieve deep optical luminescence.',
-    inspiration: 'Nighttime desert campfires and twilight skies settling over clay hills.',
     palette: ['#F9F8F6', '#EFE9E3', '#C9B59C', '#8A7663', '#2D2520'],
     tags: ['Nocturne', 'Clay', 'Oil', 'Rich Glazes', 'Depth'],
     featured: true
@@ -225,7 +213,6 @@ export const ARTWORKS = [
     image: 'https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?auto=format&fit=crop&w=1200&q=85',
     thumbnail: 'https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?auto=format&fit=crop&w=600&q=80',
     description: 'A sensitive floral study balancing botanical precision with poetic expression. Tea stains on handmade cotton paper lend warmth and an archival, timeless quality.',
-    inspiration: 'Vintage 18th-century herbarium specimens and Japanese sumi-e wash drawings.',
     palette: ['#F9F8F6', '#EFE9E3', '#D9CFC7', '#BFA78E', '#4D4138'],
     tags: ['Botanical', 'Herbal', 'Vintage', 'Delicate', 'Handmade Paper'],
     featured: false
@@ -242,7 +229,6 @@ export const ARTWORKS = [
     image: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=1200&q=85',
     thumbnail: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=600&q=80',
     description: 'Textural shifts create gentle undulating waves across the surface. When illuminated from the side, shadows reveal subtle micro-crevices and matte tactile nuances.',
-    inspiration: 'Acoustic wave patterns and resonance reverberations recorded in cathedral chambers.',
     palette: ['#F9F8F6', '#EFE9E3', '#D9CFC7', '#C9B59C', '#786C60'],
     tags: ['Resonance', 'Tactile', 'Minimalist', 'Monochrome'],
     featured: false
@@ -259,7 +245,6 @@ export const ARTWORKS = [
     image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=85',
     thumbnail: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80',
     description: 'A tribute to craftsmanship and the relationship between artisan and earth. Strong sculptural lines define the form with reverence for human touch.',
-    inspiration: 'Observing stone masons carving limestone blocks in southern Spain.',
     palette: ['#F9F8F6', '#EFE9E3', '#C9B59C', '#615246', '#26201B'],
     tags: ['Hands', 'Craft', 'Sculptural', 'Figurative', 'Terracotta'],
     featured: true
@@ -276,7 +261,6 @@ export const ARTWORKS = [
     image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=85',
     thumbnail: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80',
     description: 'An atmospheric landscape where jagged Alpine ridges dissolve into soft low-hanging cloud formations. Captures the profound silence of pristine mountain heights.',
-    inspiration: 'Early morning hike through the Swiss canton of Valais.',
     palette: ['#F9F8F6', '#EFE9E3', '#D9CFC7', '#918274', '#3E3731'],
     tags: ['Alpine', 'Mountains', 'Mist', 'Atmosphere', 'Silence'],
     featured: false
@@ -293,7 +277,6 @@ export const ARTWORKS = [
     image: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=85',
     thumbnail: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=600&q=80',
     description: 'Delicate charcoal contours meet the warmth of custom toned fawn paper. Emphasizes negative space as a fundamental compositional element.',
-    inspiration: 'The concept of "Ma" (negative space / pause) in traditional aesthetics.',
     palette: ['#F9F8F6', '#EFE9E3', '#D9CFC7', '#73685E', '#1C1917'],
     tags: ['Charcoal', 'Minimal', 'Negative Space', 'Elegance'],
     featured: false
@@ -310,7 +293,6 @@ export const ARTWORKS = [
     image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1200&q=85',
     thumbnail: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80',
     description: 'Shafts of warm sunlight pierce through ancient stone arches. Golden ochre accents interplay with neutral linen greys to create a sanctuary of warmth and peace.',
-    inspiration: 'Cloistered courtyards of medieval monasteries in Andalusia.',
     palette: ['#F9F8F6', '#EFE9E3', '#C9B59C', '#8A7865', '#332A24'],
     tags: ['Architecture', 'Sacred', 'Light', 'Arch', 'Serene'],
     featured: true
@@ -327,7 +309,6 @@ export const ARTWORKS = [
     image: 'https://images.unsplash.com/photo-1582561424760-0321d75e81fa?auto=format&fit=crop&w=1200&q=85',
     thumbnail: 'https://images.unsplash.com/photo-1582561424760-0321d75e81fa?auto=format&fit=crop&w=600&q=80',
     description: 'An intimate study of quiet afternoon repose. Soft draping fabric and gentle natural curves emphasize comfort, vulnerability, and peaceful solitude.',
-    inspiration: 'Afternoon sun filtering through sheer linen curtains onto draped cloth.',
     palette: ['#F9F8F6', '#EFE9E3', '#D9CFC7', '#C9B59C', '#54463C'],
     tags: ['Repose', 'Figure', 'Drapery', 'Gentle', 'Texture'],
     featured: false
@@ -344,7 +325,6 @@ export const ARTWORKS = [
     image: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1200&q=85',
     thumbnail: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=600&q=80',
     description: 'Earthy warmth radiates from layered sandstone bands. The tactile palette knife work brings the geological majesty of the desert right to the canvas surface.',
-    inspiration: 'Antelope Canyon light beams illuminating curved sandstone walls.',
     palette: ['#F9F8F6', '#EFE9E3', '#C9B59C', '#99765B', '#453528'],
     tags: ['Canyon', 'Desert', 'Earth', 'Sandstone', 'Modern'],
     featured: true
