@@ -1,0 +1,29 @@
+@import './styles/theme.css';
+
+/* Root container full-width setup */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--c-bg);
+}
+
+.gallery-main-layout {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.gallery-section {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+/* Ensure mobile layout has room for bottom navigation bar */
+@media (max-width: 860px) {
+  body {
+    padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+  }
+}

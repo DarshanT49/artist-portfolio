@@ -1,0 +1,213 @@
+.artwork-card {
+  break-inside: avoid;
+  margin-bottom: 22px;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  display: block;
+  user-select: none;
+  transition: transform var(--transition-smooth);
+}
+
+.artwork-card:focus-visible {
+  outline: 3px solid var(--c-accent);
+  border-radius: var(--radius-lg);
+}
+
+.card-media-wrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: var(--c-surface);
+  box-shadow: var(--shadow-pin);
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.artwork-card:hover .card-media-wrapper {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-pin-hover);
+}
+
+.card-skeleton {
+  width: 100%;
+  height: 280px;
+  opacity: 0.6;
+  animation: pulse 1.8s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+}
+
+.artwork-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.artwork-card:hover .artwork-image {
+  transform: scale(1.035);
+}
+
+/* Pinterest Overlay */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(35, 31, 29, 0.4) 0%,
+    transparent 28%,
+    transparent 55%,
+    rgba(35, 31, 29, 0.85) 100%
+  );
+  opacity: 0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: opacity var(--transition-smooth);
+  pointer-events: none;
+}
+
+.artwork-card:hover .card-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Top Row */
+.overlay-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.overlay-category {
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  background: rgba(249, 248, 246, 0.88);
+  backdrop-filter: blur(8px);
+  color: var(--c-text-primary);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.overlay-save-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  background: rgba(201, 181, 156, 0.95);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-size: 12.5px;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.overlay-save-btn:hover {
+  background: var(--c-accent-dark);
+  transform: scale(1.05);
+}
+
+.overlay-save-btn.saved {
+  background: #B25D4C;
+  color: #FFFFFF;
+}
+
+.heart-icon-filled {
+  fill: #FFFFFF;
+}
+
+/* Bottom Row */
+.overlay-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.overlay-text {
+  flex: 1;
+  color: #FFFFFF;
+}
+
+.overlay-title {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 4px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.overlay-medium {
+  font-size: 12px;
+  color: rgba(249, 248, 246, 0.88);
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.overlay-expand-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(249, 248, 246, 0.9);
+  color: var(--c-text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.overlay-expand-icon:hover {
+  transform: scale(1.1);
+  background: #FFFFFF;
+}
+
+/* Mobile Caption */
+.card-caption-mobile {
+  display: none;
+  padding: 8px 4px 2px;
+}
+
+.caption-title {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--c-text-primary);
+  line-height: 1.25;
+  margin-bottom: 2px;
+}
+
+.caption-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--c-text-muted);
+}
+
+@media (max-width: 768px) {
+  /* On touch devices, keep overlay available on tap or show mobile caption */
+  .card-caption-mobile {
+    display: block;
+  }
+
+  .card-overlay {
+    opacity: 0; /* Keep subtle for mobile */
+  }
+
+  .artwork-card {
+    margin-bottom: 16px;
+  }
+}

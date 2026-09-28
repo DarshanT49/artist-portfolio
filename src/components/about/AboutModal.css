@@ -1,0 +1,328 @@
+.about-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  background-color: var(--c-modal-backdrop);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.about-modal-dialog {
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: scaleUp 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.about-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--c-border);
+  background: var(--c-surface);
+}
+
+.about-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--c-text-muted);
+}
+
+.about-sparkle {
+  color: var(--c-accent-dark);
+}
+
+.about-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  color: var(--c-text-primary);
+  transition: all var(--transition-fast);
+}
+
+.about-close-btn:hover {
+  background: #FFFFFF;
+  border-color: var(--c-accent);
+}
+
+/* Body */
+.about-dialog-body {
+  padding: 28px 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-profile-hero {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.about-avatar-ring {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, var(--c-border), var(--c-accent));
+}
+
+.about-avatar-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--c-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--c-text-primary);
+}
+
+.about-artist-name {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--c-text-primary);
+  line-height: 1.1;
+  margin-bottom: 2px;
+}
+
+.about-artist-title {
+  font-size: 14px;
+  color: var(--c-accent-dark);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.about-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: var(--c-text-muted);
+}
+
+/* Philosophy */
+.about-philosophy-quote {
+  background: var(--c-surface);
+  border-left: 3px solid var(--c-accent);
+  padding: 16px 20px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-family: var(--font-serif);
+  font-size: 19px;
+  font-style: italic;
+  color: var(--c-text-primary);
+  line-height: 1.4;
+}
+
+.about-bio-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14.5px;
+  color: var(--c-text-secondary);
+  line-height: 1.65;
+}
+
+/* Stats */
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 14px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+}
+
+.about-stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--c-text-primary);
+}
+
+.stat-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--c-text-muted);
+}
+
+/* Exhibitions */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--c-text-primary);
+}
+
+.about-exhibitions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.exhibition-item {
+  display: flex;
+  gap: 12px;
+  font-size: 13.5px;
+  padding: 8px 12px;
+  background: var(--c-surface);
+  border-radius: var(--radius-sm);
+}
+
+.exhibition-year {
+  font-weight: 600;
+  color: var(--c-accent-dark);
+}
+
+.exhibition-title {
+  color: var(--c-text-secondary);
+}
+
+/* Palette tribute */
+.about-palette-tribute {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tribute-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--c-text-muted);
+}
+
+.tribute-colors {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.tribute-swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--c-border);
+  padding: 6px;
+  text-align: center;
+}
+
+.tribute-code {
+  font-size: 11px;
+  font-weight: 700;
+  color: #231F1D;
+}
+
+.tribute-name {
+  font-size: 10px;
+  color: #5F564F;
+}
+
+/* Footer */
+.about-dialog-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-top: 1px solid var(--c-border);
+  background: var(--c-surface);
+}
+
+.contact-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--c-text-secondary);
+}
+
+.about-dismiss-btn {
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  background: var(--c-accent);
+  color: #FFFFFF;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .about-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tribute-colors {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-dialog-footer {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .about-dismiss-btn {
+    text-align: center;
+  }
+}
