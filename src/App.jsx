@@ -10,6 +10,7 @@ import AboutModal from './components/about/AboutModal';
 import MobileBottomNav from './components/layout/MobileBottomNav';
 import Footer from './components/layout/Footer';
 import Toast from './components/common/Toast';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -54,6 +55,9 @@ function App() {
 
       {/* User Action Feedback Toast */}
       <Toast />
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </GalleryProvider>
   );
 }
