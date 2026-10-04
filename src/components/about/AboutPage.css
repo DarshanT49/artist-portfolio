@@ -26,10 +26,12 @@
   font-weight: 400;
   letter-spacing: -0.02em;
   margin: 0;
+  white-space: nowrap;
 }
 
 .about-sparkle {
   color: var(--accent-color);
+  flex-shrink: 0;
 }
 
 .back-to-gallery-btn {
@@ -41,11 +43,37 @@
   cursor: pointer;
   transition: all 0.2s ease;
   color: var(--text-secondary);
+  white-space: nowrap;
 }
 
 .back-to-gallery-btn:hover {
   background: var(--bg-secondary);
   color: var(--text-primary);
+}
+
+@media (max-width: 600px) {
+  .about-title-wrap h1 {
+    font-size: 1.2rem;
+  }
+  .back-to-gallery-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+  .about-page-header {
+    gap: 1rem;
+  }
+  .about-profile-hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .about-location, .about-contact-links, .contact-item {
+    justify-content: center;
+  }
+  .about-contact-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 
 /* Profile Hero */

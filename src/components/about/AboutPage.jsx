@@ -19,12 +19,6 @@ export default function AboutPage() {
           <Sparkles size={24} className="about-sparkle" />
           <h1>Artist Profile & Resume</h1>
         </div>
-        <button 
-          className="back-to-gallery-btn"
-          onClick={() => setIsAboutOpen(false)}
-        >
-          ← Back to Gallery
-        </button>
       </div>
 
       {/* Content */}
