@@ -1,0 +1,134 @@
+.category-rows-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-bottom: 4rem;
+}
+
+.category-row-section {
+  width: 100%;
+}
+
+.category-row-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  margin-bottom: 1.5rem;
+}
+
+.category-row-title-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.category-row-nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.row-nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.row-nav-btn:hover {
+  background: var(--text-primary);
+  color: white;
+  border-color: var(--text-primary);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .category-row-nav {
+    display: none; /* Hide on mobile where swipe is natural */
+  }
+}
+
+.category-row-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.category-row-count {
+  font-size: 0.9rem;
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+.category-row-scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  /* Hide scrollbar but allow scroll */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.category-row-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.category-row-track {
+  display: inline-flex;
+  gap: 2.5rem;
+  padding: 0 5%;
+  /* To allow scrolling past the last item gracefully */
+  padding-right: calc(5% + 2rem);
+}
+
+.category-row-item {
+  width: 300px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+@media (min-width: 768px) {
+  .category-row-item {
+    width: 340px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .category-row-item {
+    width: 380px;
+  }
+}
+
+/* Adjust ArtworkCard specifically when inside the row to look good */
+.category-row-item .artwork-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  border-radius: var(--radius-lg);
+  overflow: visible;
+}
+
+.category-row-item .card-media-wrapper {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.category-row-item .artwork-card:hover .card-media-wrapper {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 45px rgba(0,0,0,0.12);
+}

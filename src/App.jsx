@@ -4,7 +4,8 @@ import Navbar from './components/layout/Navbar';
 import HeroBanner from './components/layout/HeroBanner';
 import CategoryTabs from './components/gallery/CategoryTabs';
 import GalleryToolbar from './components/gallery/GalleryToolbar';
-import MasonryGrid from './components/gallery/MasonryGrid';
+import CategoryRows from './components/gallery/CategoryRows';
+import HeroShowcase from './components/layout/HeroShowcase';
 import ArtworkModal from './components/modal/ArtworkModal';
 import AboutPage from './components/about/AboutPage';
 import MobileBottomNav from './components/layout/MobileBottomNav';
@@ -13,7 +14,7 @@ import Toast from './components/common/Toast';
 import { Analytics } from '@vercel/analytics/react';
 
 function MainContent() {
-  const { isAboutOpen } = useGallery();
+  const { isAboutOpen, selectedCategory } = useGallery();
 
   if (isAboutOpen) {
     return <AboutPage />;
@@ -23,15 +24,12 @@ function MainContent() {
     <>
       {/* Gallery Showcase Section */}
       <section id="gallery-showcase" className="gallery-section">
+        {/* Only show Hero if "All" is selected */}
+        {selectedCategory === 'all' && <HeroShowcase />}
+        
         <div className="container">
-          {/* Category Pills (Pinterest Style) */}
-          <CategoryTabs />
-
-          {/* Toolbar (Result count, Sort dropdown, Saved filter) */}
-          <GalleryToolbar />
-
-          {/* Pinterest-Style Masonry Grid */}
-          <MasonryGrid />
+          {/* Horizontally scrolling rows for each category */}
+          <CategoryRows />
         </div>
       </section>
     </>

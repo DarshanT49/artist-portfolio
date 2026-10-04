@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useGallery } from '../../context/GalleryContext';
 import { ARTIST_INFO } from '../../data/artworks';
 import { Sparkles, MapPin, Mail, Award, BookOpen, Briefcase, GraduationCap, Code } from 'lucide-react';
+import profileImg from '../../assets/profile/profile.jpeg';
 import './AboutPage.css';
 
 export default function AboutPage() {
@@ -26,7 +27,7 @@ export default function AboutPage() {
         {/* Profile Hero Section */}
         <div className="about-profile-hero">
           <div className="about-avatar-ring">
-            <div className="about-avatar-inner">B</div>
+            <img src={profileImg} alt={ARTIST_INFO.name} className="about-profile-image" />
           </div>
           <div className="about-profile-info">
             <h2 className="about-artist-name">{ARTIST_INFO.name}</h2>

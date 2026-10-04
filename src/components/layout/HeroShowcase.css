@@ -1,0 +1,190 @@
+.hero-showcase {
+  margin: -20px 0 2rem; /* Negative top margin, reduced bottom margin */
+  padding: 0;
+  width: 100vw; /* Take full viewport width */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.hero-showcase-header {
+  display: none; /* Removed header to let image take full focus */
+}
+
+.embla {
+  overflow: hidden;
+  width: 100vw;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.hero-card.full-size {
+  position: relative;
+  flex: 0 0 100vw; /* Full width */
+  min-width: 0; /* Required for Embla */
+  height: 75vh; /* Larger height for hero impact */
+  min-height: 500px;
+  max-height: 800px;
+  border-radius: 0; /* No border radius on full screen */
+  overflow: hidden;
+  cursor: default;
+  box-shadow: none;
+  transform: none; /* No scaling effect on container */
+  transition: none;
+}
+
+.hero-card.full-size:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 7s linear; /* Slow zoom for cinematic effect */
+}
+
+.hero-card:hover .hero-image {
+  transform: scale(1.05);
+}
+
+.hero-card-overlay {
+  position: absolute;
+  inset: 0;
+  /* Blend seamlessly into the page background on the left and bottom */
+  background: 
+    linear-gradient(to right, var(--c-bg) 0%, rgba(249, 248, 246, 0.85) 15%, rgba(249, 248, 246, 0) 45%),
+    linear-gradient(to top, var(--c-bg) 0%, rgba(249, 248, 246, 0) 8%);
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: flex-start; /* Align left */
+  padding: 0 8%; /* Left padding */
+  opacity: 1; /* Always visible for full screen hero */
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Let clicks pass through to image if needed, though button is clickable */
+}
+
+.hero-card-content {
+  color: var(--text-primary);
+  transform: translateY(0);
+  max-width: 600px;
+  pointer-events: auto;
+}
+
+.hero-category {
+  display: inline-block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: var(--c-accent, #E03E2D);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.hero-art-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  color: var(--c-text-primary, #1A1A1A);
+  text-shadow: none; /* Removed text shadow for clean look on solid bg */
+}
+
+.hero-art-desc {
+  font-size: 1.2rem;
+  color: var(--c-text-secondary, #4A4A4A);
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .hero-card.full-size {
+    height: 60vh;
+  }
+  .hero-art-title {
+    font-size: 2.5rem;
+  }
+  .hero-card-overlay {
+    background: 
+      linear-gradient(to right, var(--c-bg) 0%, rgba(249, 248, 246, 0.8) 25%, rgba(249, 248, 246, 0) 70%),
+      linear-gradient(to top, var(--c-bg) 0%, rgba(249, 248, 246, 0) 12%);
+    padding: 0 5%;
+  }
+}
+
+.hero-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--c-text-primary, #1A1A1A);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Navigation Buttons */
+.hero-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  opacity: 0;
+}
+
+.hero-showcase:hover .hero-nav-btn {
+  opacity: 1;
+}
+
+.hero-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.hero-nav-btn.prev-btn {
+  left: 2rem;
+}
+
+.hero-nav-btn.next-btn {
+  right: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero-nav-btn {
+    display: none; /* Hide arrows on touch devices where users can just swipe */
+  }
+}
+
+.hero-view-btn:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(224, 62, 45, 0.3);
+}

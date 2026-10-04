@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useGallery } from '../../context/GalleryContext';
 import { CATEGORIES } from '../../data/categories';
-import { Search, X, Heart, Info } from 'lucide-react';
+import { Search, X, Heart, User } from 'lucide-react';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -137,7 +137,7 @@ export default function Navbar() {
             onClick={() => setIsAboutOpen(true)}
             id="nav-about-btn"
           >
-            <Info size={17} />
+            <User size={17} />
             <span>Artist</span>
           </button>
         </nav>

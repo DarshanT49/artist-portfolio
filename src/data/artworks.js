@@ -14,6 +14,7 @@ import tc11 from '../assets/art_images/2d_and_composition/2d_and_composition_11.
 // Calligraphy
 import cal1 from '../assets/art_images/calligraph/calligraph_1.jpeg';
 import cal2 from '../assets/art_images/calligraph/calligraph_2.jpeg';
+import cal3 from '../assets/art_images/calligraph/calligraph_3.jpeg';
 
 // Design
 import des1 from '../assets/art_images/design/design_1.jpeg';
@@ -82,7 +83,7 @@ export const CATEGORIES = [
   { id: 'time-sketch', label: 'Time Sketch', count: 5 },
   { id: 'spontaneous-expressions', label: 'Spontaneous Expressions', count: 5 },
   { id: '2d-composition', label: '2D & Composition', count: 10 },
-  { id: 'calligraphy', label: 'Calligraphy', count: 2 },
+  { id: 'calligraphy', label: 'Calligraphy', count: 3 },
   { id: 'design', label: 'Design', count: 5 },
   { id: 'landscape', label: 'Landscape', count: 4 },
   { id: 'perspective', label: 'Perspective', count: 9 }
@@ -759,6 +760,22 @@ export const ARTWORKS = [
     description: 'Elegant and fluid lettering exercises demonstrating traditional calligraphy techniques.',
     palette: ['#2F3032', '#5A5B5D', '#8C8D8F', '#1A1B1C', '#D1D2D4'],
     tags: ['Lettering', 'Typography', 'Ink'],
+    featured: false
+  },
+  {
+    id: 'cal-3',
+    title: 'Calligraphic Composition',
+    category: 'calligraphy',
+    categoryLabel: 'Calligraphy',
+    year: '2024',
+    medium: 'Ink',
+    dimensions: 'Variable',
+    aspectRatio: 'wide',
+    image: cal3,
+    thumbnail: cal3,
+    description: 'Dynamic and expressive calligraphic composition, blending bold strokes with delicate lines.',
+    palette: ['#2F3032', '#5A5B5D', '#8C8D8F', '#1A1B1C', '#D1D2D4'],
+    tags: ['Abstract', 'Typography', 'Ink'],
     featured: false
   },
   {

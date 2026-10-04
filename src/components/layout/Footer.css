@@ -1,8 +1,8 @@
 .gallery-footer {
   background-color: var(--c-surface);
   border-top: 1px solid var(--c-border);
-  padding: 64px 0 32px;
-  margin-top: 60px;
+  padding: 40px 0 24px;
+  margin-top: 40px;
   position: relative;
   z-index: 10;
 }
@@ -10,19 +10,19 @@
 .footer-top-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: 48px;
-  margin-bottom: 48px;
+  gap: 40px;
+  margin-bottom: 32px;
 }
 
 .footer-brand-col {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
 .footer-monogram {
-  width: 38px;
-  height: 38px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: var(--c-bg);
   border: 1.5px solid var(--c-accent);
@@ -30,23 +30,23 @@
   align-items: center;
   justify-content: center;
   font-family: var(--font-serif);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--c-text-primary);
 }
 
 .footer-brand-title {
   font-family: var(--font-serif);
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: 0.16em;
   font-weight: 600;
   color: var(--c-text-primary);
 }
 
 .footer-brand-desc {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--c-text-secondary);
-  line-height: 1.6;
+  line-height: 1.5;
   max-width: 440px;
 }
 
@@ -86,21 +86,22 @@
 .footer-nav-col {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .footer-col-heading {
   font-family: var(--font-serif);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--c-text-primary);
 }
 
 .footer-links-list {
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 8px;
 }
 
 .footer-links-list button {
@@ -128,6 +129,28 @@
   color: var(--c-text-muted);
   flex-wrap: wrap;
   gap: 16px;
+}
+
+.footer-copyright-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-credit {
+  font-size: 12px;
+  font-weight: 500;
+  color: #4A729A; /* Sophisticated muted blue */
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+  padding: 2px 0;
+  border-bottom: 1px solid transparent;
+}
+
+.footer-credit:hover {
+  color: #2b4c7e; /* Darker navy blue on hover */
+  border-bottom: 1px solid #2b4c7e;
 }
 
 .back-to-top-btn {

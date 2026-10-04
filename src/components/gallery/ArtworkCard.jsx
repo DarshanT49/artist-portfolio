@@ -11,6 +11,7 @@ export default function ArtworkCard({ artwork }) {
   return (
     <article
       className={`artwork-card ${imageLoaded ? 'loaded' : 'loading'}`}
+      data-aspect={artwork.aspectRatio || 'normal'}
       onClick={() => openArtwork(artwork.id)}
       tabIndex={0}
       role="button"
