@@ -30,7 +30,7 @@ export default function Footer() {
         
             <h3 className="footer-brand-title">BHARTESH</h3>
             <p className="footer-brand-desc">
-              Personal Fine Art & Painting Portfolio. A celebration of natural earth pigments,
+              Personal Art & Painting Portfolio. A celebration of natural earth pigments,
               textural oil glazes, and minimalist serenity.
             </p>
             

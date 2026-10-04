@@ -55,7 +55,7 @@ export default function Navbar() {
           </div>
           <div className="brand-text">
             <span className="brand-name">BHARTESH</span>
-            <span className="brand-tagline">Fine Art Gallery</span>
+            <span className="brand-tagline">Art Gallery</span>
           </div>
         </div>
 
