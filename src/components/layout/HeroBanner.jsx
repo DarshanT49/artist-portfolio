@@ -30,7 +30,7 @@ export default function HeroBanner() {
 
         {/* Curator Statement */}
         <p className="hero-description">
-          An intimate visual archive of original paintings by <strong>Darshan</strong>. 
+          An intimate visual archive of original paintings by <strong>Bhartesh</strong>. 
           Exploring delicate impasto textures, raw linen, mineral pigments, and the quiet poetry 
           found in contemplation.
         </p>

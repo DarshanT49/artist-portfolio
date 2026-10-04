@@ -1,16 +1,45 @@
 import React from 'react';
-import { GalleryProvider } from './context/GalleryContext';
+import { GalleryProvider, useGallery } from './context/GalleryContext';
 import Navbar from './components/layout/Navbar';
 import HeroBanner from './components/layout/HeroBanner';
 import CategoryTabs from './components/gallery/CategoryTabs';
 import GalleryToolbar from './components/gallery/GalleryToolbar';
 import MasonryGrid from './components/gallery/MasonryGrid';
 import ArtworkModal from './components/modal/ArtworkModal';
-import AboutModal from './components/about/AboutModal';
+import AboutPage from './components/about/AboutPage';
 import MobileBottomNav from './components/layout/MobileBottomNav';
 import Footer from './components/layout/Footer';
 import Toast from './components/common/Toast';
 import { Analytics } from '@vercel/analytics/react';
+
+function MainContent() {
+  const { isAboutOpen } = useGallery();
+
+  if (isAboutOpen) {
+    return <AboutPage />;
+  }
+
+  return (
+    <>
+      {/* Hero Section */}
+      <HeroBanner />
+
+      {/* Gallery Showcase Section */}
+      <section id="gallery-showcase" className="gallery-section">
+        <div className="container">
+          {/* Category Pills (Pinterest Style) */}
+          <CategoryTabs />
+
+          {/* Toolbar (Result count, Sort dropdown, Saved filter) */}
+          <GalleryToolbar />
+
+          {/* Pinterest-Style Masonry Grid */}
+          <MasonryGrid />
+        </div>
+      </section>
+    </>
+  );
+}
 
 function App() {
   return (
@@ -23,29 +52,11 @@ function App() {
 
       {/* Main Content Layout */}
       <main className="gallery-main-layout">
-        {/* Hero Section */}
-        <HeroBanner />
-
-        {/* Gallery Showcase Section */}
-        <section id="gallery-showcase" className="gallery-section">
-          <div className="container">
-            {/* Category Pills (Pinterest Style) */}
-            <CategoryTabs />
-
-            {/* Toolbar (Result count, Sort dropdown, Saved filter) */}
-            <GalleryToolbar />
-
-            {/* Pinterest-Style Masonry Grid */}
-            <MasonryGrid />
-          </div>
-        </section>
+        <MainContent />
       </main>
 
       {/* Modal / Full-Screen Picture View with Description & Related Artworks */}
       <ArtworkModal />
-
-      {/* Artist Profile & Statement Modal */}
-      <AboutModal />
 
       {/* Mobile Bottom Navigation Bar (Home, Collections, Search, Saved, Artist) */}
       <MobileBottomNav />

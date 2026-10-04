@@ -332,21 +332,35 @@ export const ARTWORKS = [
 ];
 
 export const ARTIST_INFO = {
-  name: 'Darshan',
-  title: 'Visual Artist & Painter',
-  bio: 'A contemporary visual artist working between traditional oil techniques and modern minimalist abstraction. Focused on texture, natural earth pigments, and the tranquil interplay of light and quiet architectural form.',
-  philosophy: '“Art is not about filling empty space, but creating room for the mind to breathe.”',
-  location: 'Studio Atelier',
-  experience: 'Exhibitions across Europe & Asia',
+  name: 'Bhartesh Anil Takade',
+  title: 'Drawing Teacher & Visual Artist',
+  bio: 'I am a creative and passionate student who loves drawing and teaching. I enjoy helping others learn new art skills and like to share my ideas in fun and simple ways. I am patient, responsible, and always ready to learn and grow.',
+  philosophy: '“I lead small art sessions, guide classmates during group work, and help organize art activities. These experiences have made me more confident, responsible, and a good team leader.”',
+  location: 'Kolhapur, Maharashtra',
+  email: 'bharteshtakade@gmail.com',
+  phone: '7709087904',
+  address: 'A/p : Shedshal, Tal : Shirol, Dist : Kolhapur',
+  languages: ['Marathi', 'English', 'Hindi', 'Kannada'],
+  hobbies: ['Painting', 'Sketching & Drawing', 'Reading', 'Traveling'],
+  skills: ['Painting & Composition', 'Communication', 'Teaching Planning', 'Self Motivated', 'Dedicated'],
+  experience: '4 Months Teaching Experience',
   stats: [
-    { label: 'Original Works', value: '45+' },
-    { label: 'Solo Exhibitions', value: '8' },
-    { label: 'Private Collections', value: '120+' },
-    { label: 'Years of Practice', value: '10+' }
+    { label: 'Art Teacher Diploma (ATD)', value: '2023' },
+    { label: 'HSC (Arts)', value: '2021' },
+    { label: 'SSC (Education)', value: '2019' },
+    { label: 'Teaching Experience', value: '4 mos' }
   ],
-  exhibitions: [
-    { year: '2025', title: 'Silent Horizons — Gallery Minima, Paris' },
-    { year: '2024', title: 'Earth & Linen — Studio Biennial, Milan' },
-    { year: '2023', title: 'The Geometry of Stillness — Contemporary Space, Zurich' }
+  education: [
+    { year: '2023', title: 'Art Teacher Diploma (ATD) - Maharashtra State Board Mumbai (53.40%)' },
+    { year: '2021', title: 'HSC (Arts) - Maharashtra State Board (67.33%)' },
+    { year: '2019', title: 'SSC (Education) - Maharashtra State Board (55.20%)' }
+  ],
+  workExperience: [
+    { 
+      date: '07/2024 – 10/2024', 
+      title: 'Drawing Teacher', 
+      company: 'Smt. sIndira Babgonda Patil Children’s Academy, Sangli',
+      description: 'Passionate and creative Drawing Teacher with 4 months of experience in teaching visual arts, sketching, and painting techniques to students of all ages. Skilled in fostering artistic expression, developing students technical skills, and encouraging creativity through engaging lesson plans.'
+    }
   ]
 };

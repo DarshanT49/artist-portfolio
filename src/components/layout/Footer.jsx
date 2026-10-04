@@ -27,8 +27,8 @@ export default function Footer() {
         <div className="footer-top-grid">
           {/* Col 1: Brand & Philosophy */}
           <div className="footer-brand-col">
-            <div className="footer-monogram">D</div>
-            <h3 className="footer-brand-title">DARSHAN</h3>
+            <div className="footer-monogram">B</div>
+            <h3 className="footer-brand-title">BHARTESH</h3>
             <p className="footer-brand-desc">
               Personal Fine Art & Painting Portfolio. A celebration of natural earth pigments,
               textural oil glazes, and minimalist serenity.
@@ -87,7 +87,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="footer-bottom-bar">
           <div className="footer-copyright">
-            © {new Date().getFullYear()} Darshan Art Gallery. All rights reserved. Personal Portfolio Exhibition.
+            © {new Date().getFullYear()} Bhartesh Art Gallery. All rights reserved. Personal Portfolio Exhibition.
           </div>
 
           <button className="back-to-top-btn" onClick={scrollToTop} aria-label="Back to top">

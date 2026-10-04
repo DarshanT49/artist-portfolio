@@ -192,7 +192,7 @@ export default function ArtworkModal() {
                 </div>
 
                 <h2 className="artwork-modal-title">{activeArtwork.title}</h2>
-                <div className="artwork-artist-credit">Original Artwork by <strong>Darshan</strong></div>
+                <div className="artwork-artist-credit">Original Artwork by <strong>Bhartesh</strong></div>
               </div>
 
               {/* Specification Grid (Dimensions & Year) */}

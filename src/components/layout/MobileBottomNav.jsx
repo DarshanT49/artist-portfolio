@@ -20,6 +20,7 @@ export default function MobileBottomNav() {
 
   const handleHomeClick = () => {
     setActiveSheet(null);
+    setIsAboutOpen(false);
     setSelectedCategory('all');
     setSearchQuery('');
     setShowOnlyFavorites(false);
@@ -36,6 +37,7 @@ export default function MobileBottomNav() {
 
   const handleSavedClick = () => {
     setActiveSheet(null);
+    setIsAboutOpen(false);
     setShowOnlyFavorites(!showOnlyFavorites);
     const gallerySection = document.getElementById('gallery-showcase');
     if (gallerySection) {
@@ -49,6 +51,7 @@ export default function MobileBottomNav() {
   };
 
   const handleSelectCategory = (catId) => {
+    setIsAboutOpen(false);
     setSelectedCategory(catId);
     setShowOnlyFavorites(false);
     setActiveSheet(null);
@@ -155,6 +158,7 @@ export default function MobileBottomNav() {
                   key={tag}
                   className="quick-tag-pill"
                   onClick={() => {
+                    setIsAboutOpen(false);
                     setSearchQuery(tag);
                     setActiveSheet(null);
                     const gallerySection = document.getElementById('gallery-showcase');

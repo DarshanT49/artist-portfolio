@@ -19,6 +19,7 @@ export default function Navbar() {
   const [searchFocused, setSearchFocused] = useState(false);
 
   const handleHomeClick = () => {
+    setIsAboutOpen(false);
     setSelectedCategory('all');
     setSearchQuery('');
     setShowOnlyFavorites(false);
@@ -26,6 +27,7 @@ export default function Navbar() {
   };
 
   const handleCategorySelect = (catId) => {
+    setIsAboutOpen(false);
     setSelectedCategory(catId);
     setShowOnlyFavorites(false);
     const gallerySection = document.getElementById('gallery-showcase');
@@ -35,6 +37,7 @@ export default function Navbar() {
   };
 
   const handleFavoritesClick = () => {
+    setIsAboutOpen(false);
     setShowOnlyFavorites(!showOnlyFavorites);
     const gallerySection = document.getElementById('gallery-showcase');
     if (gallerySection) {
@@ -48,10 +51,10 @@ export default function Navbar() {
         {/* Brand / Logo */}
         <div className="navbar-brand" onClick={handleHomeClick} role="button" tabIndex={0}>
           <div className="brand-monogram">
-            <span>D</span>
+            <span>B</span>
           </div>
           <div className="brand-text">
-            <span className="brand-name">DARSHAN</span>
+            <span className="brand-name">BHARTESH</span>
             <span className="brand-tagline">Fine Art Gallery</span>
           </div>
         </div>
