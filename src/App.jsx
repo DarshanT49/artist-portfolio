@@ -21,9 +21,6 @@ function MainContent() {
 
   return (
     <>
-      {/* Hero Section */}
-      <HeroBanner />
-
       {/* Gallery Showcase Section */}
       <section id="gallery-showcase" className="gallery-section">
         <div className="container">
